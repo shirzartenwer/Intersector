@@ -20,4 +20,5 @@ COPY src/ ./src/
 USER vscode
 
 # Command to run the application
-CMD ["python", "./src/main.py"]
+CMD ["streamlit", "run", "./src/app.py"]
+

@@ -1,6 +1,6 @@
 {
   "name": "Python Development Container",
-  "dockerFile": "Dockerfile",
+  "dockerFile": "../Dockerfile",
   "context": "..",
   "settings": {
     "python.pythonPath": "/usr/local/bin/python"
