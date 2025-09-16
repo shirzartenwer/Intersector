@@ -1,5 +1,4 @@
 from Core.two_collection_intersector import TwoCollectionIntersector
-
 import pytest
 
 
