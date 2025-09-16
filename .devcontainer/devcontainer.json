@@ -1,0 +1,15 @@
+{
+  "name": "Python Development Container",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "datoux.vscode-pytest-intellisense",
+  ],
+  "postCreateCommand": "pip install -r requirements.txt",
+  "remoteUser": "vscode"
+}

@@ -1,0 +1,4 @@
+{
+  "python.testing.pytestArgs": ["Backend", "Frontend"],
+  "python.testing.pytestEnabled": true,
+}
