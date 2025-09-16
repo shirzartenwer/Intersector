@@ -20,7 +20,7 @@ class TwoCollectionIntersector:
         return cls(collection_a, collection_b)
         
 
-    def intersect(self, index:int) -> Union[List[float], float]:
+    def intersect(self, index: int) -> Union[List[float], float]:
         result = []
         start_time = time.time()
         if index == 0:
