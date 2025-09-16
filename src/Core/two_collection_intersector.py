@@ -20,10 +20,10 @@ class TwoCollectionIntersector:
         return cls(collection_a, collection_b)
         
 
-    def intersect(self, choice: str) -> Union[List[float], float]:
+    def intersect(self, index:int) -> Union[List[float], float]:
         result = []
         start_time = time.time()
-        if choice == "Collection A":
+        if index == 0:
             hash_set = set(self.collection_a)
             iterator = self.collection_b
         else:
