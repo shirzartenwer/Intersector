@@ -4,7 +4,7 @@ This intersector app is built with Python. UI componenent is provided by [stream
 
 
 ```
-OptravisHomework
+Intersector
 ├── docker-compose.yml
 ├── Dockerfile
 ├── README.md
@@ -25,7 +25,7 @@ OptravisHomework
 First clone the git repository
 
 ```
-git clone git@github.com:shirzartenwer/OptravisHomework.git
+git clone git@github.com:shirzartenwer/Intersector.git
 cd OptravisHomework
 ```
 
