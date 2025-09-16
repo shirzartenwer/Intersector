@@ -15,8 +15,8 @@ class TwoCollectionIntersector:
 
     @classmethod
     def from_sizes(cls, size_a: int, size_b: int) -> "TwoCollectionIntersector":
-        collection_a = [random.random() for _ in range(size_a)]
-        collection_b = [random.random() for _ in range(size_b)]
+        collection_a = [random.randint(1, 1000) for _ in range(size_a)]
+        collection_b = [random.randint(1, 1000) for _ in range(size_b)]
         return cls(collection_a, collection_b)
         
 
