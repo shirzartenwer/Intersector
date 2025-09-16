@@ -10,12 +10,35 @@ def test_app_run_through_with_default_value():
     assert not at.exception
 
 
-
 def test_app_display_default_values_correctly():
     at = AppTest.from_file(APP_PATH)
     at.run()
     assert at.number_input[0].value == 50
     assert at.number_input[1].value == 25   
+
+
+@pytest.mark.parametrize("value", [0, 1000])
+def test_the_add_sign_on_two_number_input_field(value):
+    at = AppTest.from_file(APP_PATH).run()
+    n_1 = at.number_input[0].set_value(value)
+    n_2 = at.number_input[1].set_value(value)
+    initial_value = n_1.value
+    n_1.increment().run()
+    n_2.increment().run()
+    assert n_1.value == initial_value + 1
+    assert n_2.value == initial_value + 1
+
+
+@pytest.mark.parametrize("value", [1, 1000])
+def test_the_minus_sign_on_two_number_input_field(value):
+    at = AppTest.from_file(APP_PATH).run()
+    n_1 = at.number_input[0].set_value(value)
+    n_2 = at.number_input[1].set_value(value)
+    initial_value = n_1.value
+    n_1.decrement().run()
+    n_2.decrement().run()
+    assert n_1.value == initial_value - 1
+    assert n_2.value == initial_value - 1
 
 
 @pytest.mark.parametrize("size_a, size_b, choice", 
@@ -30,7 +53,6 @@ def test_give_other_values_to_number_and_choice_and_submit_then_it_runs(size_a, 
     at.radio(key="choice_given").set_value(choice)
     at.button(key="run_button").click().run()
     assert not at.exception
-
 
 
 def test_when_no_option_is_chosen_then_no_choice_is_made():
@@ -69,7 +91,5 @@ def test_when_no_option_is_chosen_and_submitted_shows_warning():
     assert len(at.info) == 0
 
 
-
- 
 
 
