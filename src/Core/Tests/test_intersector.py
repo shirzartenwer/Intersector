@@ -13,7 +13,7 @@ def test_output_number_type(size_a=100, size_b=200):
     intersector = TwoCollectionIntersector.from_sizes(size_a, size_b)
     result, run_time = intersector.intersect("Collection A")
     assert isinstance(result, list)
-    assert all(isinstance(x, float) for x in result)
+    assert all(isinstance(x, int) for x in result)
     assert isinstance(run_time, float)
 
     
