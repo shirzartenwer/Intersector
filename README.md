@@ -66,7 +66,7 @@ pytest
 To see the test coverage run: 
 
 ```
-coverage report 
+pytest --cov=src
 ```
 
 
