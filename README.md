@@ -1,6 +1,12 @@
 # Intersector App Built in Python
 
-This intersector app is built with Python. UI componenent is provided by [streamlit library](https://streamlit.io/), a Python based UI library. The structure of this repo looks like the following:
+This intersector app is built with Python. UI componenent is provided by [streamlit library](https://streamlit.io/), a Python based UI library. 
+
+**There is two version of the desgin**: the main branch host a simpler Design that sovles the problem and doesn't introduce many OOP concept. The `dev_oop` branch hosts a more object-oriented design that's more robust for extension, if there is further extension of the business logics or requirments. But if the business logic and specification doesn't change, this branch should do the job.
+
+The structure of the repo is displayed in the README section of two branches. Thus, the README section differs. The instruction to run the app is the same.
+
+The structure of the main branch looks like the following. 
 
 
 ```
